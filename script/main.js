@@ -100,16 +100,6 @@ const animationTimeline = () => {
       },
       "-=1"
     )
-    .from("#backgroundVideo", 1, {
-      opacity: 0,
-      scale: 1.1,
-  }, "+=1")
-
-    .to("#backgroundVideo", 1, {
-      opacity: 0,
-      scale: 1.1,
-  }, "+=7.5")
-
     .from(".three", 0.7, {
       opacity: 0,
       y: 10,
