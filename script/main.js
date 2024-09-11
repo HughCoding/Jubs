@@ -1,29 +1,27 @@
 const video = document.getElementById('backgroundVideo');
 
-// Define os tempos de início e fim (em segundos)
-const startTime = 0.5; // Tempo em segundos para começar
-const endTime = 7.4; // Tempo em segundos para parar
+
+const startTime = 0.5; 
+const endTime = 7.4;
 const hideTime = 7.4;
-const fadeOutStart = 7.4; // Tempo em segundos para começar a desaparecer
+const fadeOutStart = 7.4; 
 const fadeOutDuration = 7.4;
-// Função para iniciar o vídeo
+
 function startVideo() {
-  video.currentTime = startTime; // Define o tempo inicial
-  video.play(); // Reproduz o vídeo
+  video.currentTime = startTime; 
+  video.play(); 
   
 
-  // Define a parada do vídeo após o tempo especificado
-  setTimeout(() => {
-    video.pause(); // Pausa o vídeo
 
-    // Define a ocultação do vídeo após o tempo especificado
+  setTimeout(() => {
+    video.pause();
+
     setTimeout(() => {
-      video.style.opacity = 0; // Torna o vídeo invisível com transição suave
-    }, (fadeOutStart - endTime) * 1000); // Tempo para iniciar o desaparecimento em milissegundos
-  }, (endTime - startTime) * 1000); // Tempo de reprodução em milissegundos
+      video.style.opacity = 0; 
+    }, (fadeOutStart - endTime) * 1000); 
+  }, (endTime - startTime) * 1000);
 }
 
-// Inicia o vídeo ao carregar a página
 window.onload = startVideo;
 
 const animationTimeline = () => {
@@ -54,15 +52,7 @@ const animationTimeline = () => {
   };
 
   const tl = new TimelineMax();
-  tl.from("#backgroundVideo", 1, {
-  onStart: () => {
-    const video = document.getElementById('backgroundVideo');
-    video.currentTime = 7; // Certifique-se de que o vídeo comece do início
-    video.play(); // Reproduza o vídeo
-}
-})
-  
-  
+
 
   tl.to(".container", 0.1, {
     visibility: "visible",
@@ -103,7 +93,7 @@ const animationTimeline = () => {
     .from(".three", 0.7, {
       opacity: 0,
       y: 10,
-      // scale: 0.7
+
     })
 
     .to(
@@ -164,7 +154,7 @@ const animationTimeline = () => {
     .from(".new-screen", 0.7, {
       opacity: 0,
       scale: 1,
-    }, "+=1") // Começa 1 segundo após a animação do .four
+    }, "+=1") 
     .to(".new-screen p", 1, {
       opacity: 0,
       y: 20,
