@@ -139,7 +139,7 @@ const animationTimeline = () => {
       0.05
     )
     .to(".fake-btn", 0.1, {
-      backgroundColor: "#rgb(82, 146, 217)",
+      backgroundColor: "rgb(58, 105, 169)",
     })
     .to(
       ".four",
@@ -324,17 +324,13 @@ const animationTimeline = () => {
       "+=1"
     );
 
-  // tl.seek("currentStep");
-  // tl.timeScale(2);
-
-  // Restart Animation on click
   const replyBtn = document.getElementById("replay");
   replyBtn.addEventListener("click", () => {
     tl.restart();
   });
 };
 
-// Import the data to customize and insert them into page
+
 const fetchData = () => {
   fetch("customize.json")
     .then((data) => data.json())
@@ -353,7 +349,6 @@ const fetchData = () => {
     });
 };
 
-// Run fetch and animation in sequence
 const resolveFetch = () => {
   return new Promise((resolve, reject) => {
     fetchData();
