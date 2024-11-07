@@ -79,6 +79,15 @@ body {
   font-size: 3rem;
 }
 
+.new-screen-2 {
+  font-size: 3rem;
+}
+
+.new-screen-3 {
+  font-size: 3rem;
+}
+
+
 .four .text-box {
   width: 600px;
   margin: 0 auto;
@@ -261,7 +270,7 @@ body {
 }
 
 @media (max-width: 600px) {
-  .new-screen {
+  .new-screen, .new-screen-2, .new-screen-3 {
     font-size: 2.3rem;
   }
 }
