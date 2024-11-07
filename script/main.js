@@ -121,7 +121,37 @@ const animationTimeline = () => {
       },
       "+=5"
     )
+
+    .from(".new-screen-2", 0.7, {
+      opacity: 0,
+      y: 10,
     
+    })
+    .to(
+      ".new-screen-2",
+      1,
+      {
+        opacity: 0,
+        y: 10,
+      },
+      "+=5"
+    )
+    .from(".new-screen-3", 0.7, {
+      opacity: 0,
+      y: 10,
+    
+    })
+    .to(
+      ".new-screen-3",
+      1,
+      {
+        opacity: 0,
+        y: 10,
+      },
+      "+=2"
+    )
+
+
     .from(".four", 0.7, {
       scale: 0.2,
       opacity: 0,
